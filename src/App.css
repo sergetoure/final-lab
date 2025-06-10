@@ -1,8 +1,8 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  /* text-align: center; */
 }
 
 .logo {
@@ -39,4 +39,22 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: #535bf2;
+  margin: 0;
+  position: fixed;
+  width: 100vw;
+}
+/*create space between icons*/
+
+.App-header menu {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
 }
