@@ -1,15 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Header from "../components/header";
-
+import LandingSection from "../components/LandingSection.jsx";
 function App() {
   return (
     <>
       <Header />
-      <main></main>
-      <footer></footer>
+      <main className="App-main">
+        <LandingSection />
+        <section className="project" id="project">
+          feature projects
+        </section>
+        <section className="contact-me" id="contact-me">
+          Contact me
+        </section>
+      </main>
+      <footer className="App-footer">hello footer</footer>
     </>
   );
 }
