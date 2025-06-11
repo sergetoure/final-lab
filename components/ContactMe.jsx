@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormInput from "./FormInput";
 import SubmitBtn from "./SubmitBtn";
 
@@ -12,9 +12,9 @@ const ContactMe = () => {
         value: "",
         isValid: false,
         type: "text",
-        pattern: "^[a-zA-Z ]{2,}$",
+        pattern: "^[a-zA-Z ]{2,200}$",
         errorMessage:
-          "Name must be at least 2 characters long and contain only letters and spaces.",
+          "Name must be 2-200 characters long and contain only letters and spaces.",
         required: true,
         isTouched: false,
       },
@@ -49,9 +49,9 @@ const ContactMe = () => {
         value: "",
         isValid: false,
         type: "text",
-        pattern: "^[a-zA-Z0-9.,!?\\s]{2,}$",
+        pattern: "^[a-zA-Z0-9.,!?\\s]{2,200}$",
         errorMessage:
-          "Message must be at least 2 characters long and can contain letters, numbers, and basic punctuation.",
+          "Message must be 2-200 characters long and can contain letters, numbers, and basic punctuation.",
         required: true,
         isTouched: false,
       },
@@ -59,18 +59,15 @@ const ContactMe = () => {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formState.isValid) {
-      alert("Please fill out the form correctly before submitting.");
-      return;
-    }
+    console.log("Form submitted with data:", formState.formInputs);
+    // Reset form state after submission
     setState((prevState) => ({
-      ...prevState,
       isValid: false,
       formInputs: prevState.formInputs.map((input) => ({
         ...input,
         value: "",
         isValid: false,
-        errorMessage: "",
+        isTouched: false,
       })),
     }));
   };
