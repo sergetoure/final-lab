@@ -25,7 +25,13 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #7a7af4;
+  /* add a color on hover */
+  color: #646cff;
+  text-decoration: underline;
+  text-decoration-color: #646cff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+
   transition: all 0.3s ease-in-out;
 }
 
