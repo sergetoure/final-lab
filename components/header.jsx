@@ -63,6 +63,7 @@ const Header = () => {
                 key={index}
                 icon={icon}
                 size="2x"
+                color="white"
                 onClick={() => {
                   handleClick(icon);
                 }}
