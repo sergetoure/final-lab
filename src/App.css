@@ -85,21 +85,21 @@
 
 .App-main {
   /* padding-top: 20vh; */
+  
 }
 
 .landing {
-  height: 80vh;
-
+  height: 90vh;
   text-align: center;
   padding-top: 15rem;
 }
 
 .project {
-  height: 80vh;
+  height: 90vh;
   background-color: #003707;
 }
 .contact-me {
-  height: 80vh;
+  height: 90vh;
   background-color: #5600c6;
 }
 

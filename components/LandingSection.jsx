@@ -3,9 +3,9 @@ const LandingSection = () => {
   const bio = {
     name: "Serge Toure",
     title: "Software Engineer",
-    avatar: "https://i.pravatar.cc/150?img=9",
+    avatar: "https://i.pravatar.cc/150?img=7",
     description:
-      "I am a software engineer with a passion for building scalable web applications and working with modern technologies. I love to learn new things and share my knowledge with others.",
+      "...with a passion for building scalable web applications and working with modern technologies. I love to learn new things and share my knowledge with others.",
     skills: ["JavaScript", "React", "Node.js", "Python", "Django"],
     contact: {
       email: "serge.toure@eviatech.com",
