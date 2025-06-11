@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Header from "../components/header";
 import LandingSection from "../components/LandingSection.jsx";
 import ProjectSection from "../components/ProjectSection.jsx";
@@ -9,8 +9,8 @@ function App() {
       <Header />
       <main className="App-main">
         <LandingSection />
-        
-          <ProjectSection />
+
+        <ProjectSection />
 
         <ContactMe />
       </main>
