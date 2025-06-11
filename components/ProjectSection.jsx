@@ -27,7 +27,7 @@ const ProjectSection = ()=>{
         <>
         <section className="project" id="project">
 
-            <h1>Feature Projects</h1>
+            <h1 style={{fontSize: "2rem",padding: "5rem",}}>Feature Projects</h1>
             <div className="project-cards">
               { projects.map((project, index) => (
                 <ProjectCard 

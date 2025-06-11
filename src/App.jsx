@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "../components/header";
 import LandingSection from "../components/LandingSection.jsx";
 import ProjectSection from "../components/ProjectSection.jsx";
+import ContactMe from "../components/ContactMe.jsx";
 function App() {
   return (
     <>
@@ -10,10 +11,8 @@ function App() {
         <LandingSection />
         
           <ProjectSection />
-        
-        <section className="contact-me" id="contact-me">
-          Contact me
-        </section>
+
+        <ContactMe />
       </main>
       <footer className="App-footer">hello footer</footer>
     </>
