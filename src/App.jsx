@@ -1,15 +1,16 @@
 import "./App.css";
 import Header from "../components/header";
 import LandingSection from "../components/LandingSection.jsx";
+import ProjectSection from "../components/ProjectSection.jsx";
 function App() {
   return (
     <>
       <Header />
       <main className="App-main">
         <LandingSection />
-        <section className="project" id="project">
-          feature projects
-        </section>
+        
+          <ProjectSection />
+        
         <section className="contact-me" id="contact-me">
           Contact me
         </section>

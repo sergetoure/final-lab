@@ -33,9 +33,6 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
 
 .read-the-docs {
   color: #888;
@@ -85,6 +82,7 @@
 
 .App-main {
   /* padding-top: 20vh; */
+  color: white;
   
 }
 
@@ -95,8 +93,20 @@
 }
 
 .project {
-  height: 90vh;
+  
   background-color: #003707;
+  
+}
+
+.card h2{
+  margin: 0;
+  padding: 1rem;
+  font-weight: 800;
+}
+.card p{
+  margin: 0;
+  padding: 1rem;
+ 
 }
 .contact-me {
   height: 90vh;
@@ -106,4 +116,39 @@
 .App-footer {
   height: 10vh;
   background-color: aquamarine;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  width: 800px;
+  margin: 0 auto;
+
+}
+.card{
+width: 350px;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 2rem auto;
+  border-radius: 8px;
+  padding: 0rem;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  
+  
+}
+
+.card h2{
+  margin: 0;
+  padding: 1rem;
+  font-weight: 800;
+
+}
+
+.card p{
+  margin: 0;
+  padding: 1rem;
 }

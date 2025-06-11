@@ -24,7 +24,7 @@ const LandingSection = () => {
             <Avatar.Image src={bio.avatar} />
           </Avatar.Root>
         </div>
-        <h1 style={{color:"white"}}>I am a {bio.title}</h1>
+        <h1 >I am a {bio.title}</h1>
         <h2
           style={{
             textAlign: "center",
