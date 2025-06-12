@@ -9,9 +9,11 @@ import {
   faStackOverflow,
   //faEnvelope,
 } from "@fortawesome/free-brands-svg-icons";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Header = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
   const [iconList, setIconList] = useState([
     faLinkedin,
     faGithub,
@@ -21,6 +23,20 @@ const Header = () => {
     faMedium,
     faStackOverflow,
   ]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isVisible =
+        prevScrollPos > currentScrollPos || currentScrollPos < 10;
+
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   const handleClick = (icon) => {
     let url = "";
@@ -54,33 +70,31 @@ const Header = () => {
     }
   };
   return (
-    <>
-      <header className="App-header">
-        <div className="icon-list">
-          {iconList.map((icon, index) => (
-            <div key={index} className="icon-container">
-              <FontAwesomeIcon
-                key={index}
-                icon={icon}
-                size="2x"
-                color="#fff"
-                onClick={() => {
-                  handleClick(icon);
-                }}
-              />
-            </div>
-          ))}
-        </div>
+    <header className={`App-header ${visible ? "" : "header-hidden"}`}>
+      <div className="icon-list">
+        {iconList.map((icon, index) => (
+          <div key={index} className="icon-container">
+            <FontAwesomeIcon
+              key={index}
+              icon={icon}
+              size="2x"
+              color="#fff"
+              onClick={() => {
+                handleClick(icon);
+              }}
+            />
+          </div>
+        ))}
+      </div>
 
-        <div>
-          <menu>
-            <a href="#landing">Home</a>
-            <a href="#project">Projects</a>
-            <a href="#contact-me">Contact Me</a>
-          </menu>
-        </div>
-      </header>
-    </>
+      <div>
+        <menu>
+          <a href="#landing">Home</a>
+          <a href="#project">Projects</a>
+          <a href="#contact-me">Contact Me</a>
+        </menu>
+      </div>
+    </header>
   );
 };
 
