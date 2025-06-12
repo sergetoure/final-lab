@@ -45,8 +45,8 @@
   width: 100vw;
   padding: 1rem;
 }
-/*create space between icons*/
 
+/*create space between icons*/
 .App-header menu {
   display: inline-flex;
   flex-flow: row nowrap;
@@ -67,6 +67,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .icon-container:hover {
   cursor: pointer;
   transform: scale(1.1);
@@ -93,10 +94,12 @@
   padding: 1rem;
   font-weight: 800;
 }
+
 .card p {
   margin: 0;
   padding: 1rem;
 }
+
 .contact-me {
   background-color: #5600c6;
 }
@@ -116,6 +119,7 @@
   width: 800px;
   margin: 0 auto;
 }
+
 .card {
   width: 350px;
   background-color: #ffffff;
@@ -141,73 +145,75 @@
   width: 70%;
   margin: 0 auto;
   padding: 4rem;
-  & div {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    &:not(:last-child) {
-      margin-bottom: 1.7rem;
-    }
-  }
+}
 
-  &__label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
+.form div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
 
-  &__input {
-    width: 100%;
-    padding: 1.6rem;
-    //MAKE A TRANSPARENT BACKGROUND
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 3rem;
-    font-size: 1.5rem;
-  }
+.form div:not(:last-child) {
+  margin-bottom: 1.7rem;
+}
 
-  &__message {
-    background-color: transparent;
-    width: 100%;
-    padding: 0.5rem;
+.form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 100px;
-    font-size: 1.5rem;
-    resize: vertical;
-    font-family: inherit;
-    height: 30vh;
-  }
-  &__error-message {
-    color: tomato;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-  }
+.form__input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 3rem;
+  font-size: 1.5rem;
+}
 
-  &__submit-btn {
-    background-color: #9546fb;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
+.form__message {
+  background-color: transparent;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 100px;
+  font-size: 1.5rem;
+  resize: vertical;
+  font-family: inherit;
+  height: 30vh;
+}
 
-    &:hover {
-      background-color: #7a3ed8;
-      transition: background-color 0.3s ease;
-    }
-    &:disabled {
-      background-color: #ccc;
-      cursor: not-allowed;
-      color: #4e4b4b;
-    }
-  }
+.form__error-message {
+  color: tomato;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.form__submit-btn {
+  background-color: #9546fb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.form__submit-btn:hover {
+  background-color: #7a3ed8;
+  transition: background-color 0.3s ease;
+}
+
+.form__submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #4e4b4b;
 }
 
 .modal-overlay {
@@ -221,6 +227,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .modal-content {
   background-color: #56fe91;
   padding: 2rem;
@@ -231,20 +238,21 @@
   animation: fadeIn 0.3s ease-in-out;
   will-change: opacity, transform;
   text-align: left;
-  & h2 {
-    margin: 0;
-    padding: 0.5rem 0;
-    font-weight: 700;
-
-    color: #000;
-  }
-  & p {
-    margin: 0;
-    padding: 0.5rem 0;
-
-    color: #000;
-  }
 }
+
+.modal-content h2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  color: #000;
+}
+
+.modal-content p {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: #000;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -255,6 +263,7 @@
     transform: translateY(0);
   }
 }
+
 .modal-close-btn {
   background-color: transparent;
   border: none;
@@ -264,9 +273,9 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
 
-  &:hover {
-    color: #ff0000;
-    transition: color 0.3s ease;
-  }
+.modal-close-btn:hover {
+  color: #ff0000;
+  transition: color 0.3s ease;
 }
