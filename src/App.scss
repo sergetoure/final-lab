@@ -50,6 +50,7 @@
   height: 8vh;
   width: 100vw;
   padding: 1rem;
+  transition: transform 0.3s ease-in-out; // Add this line
 }
 /*create space between icons*/
 
@@ -214,4 +215,8 @@
       color: #4e4b4b;
     }
   }
+}
+
+.header-hidden {
+  transform: translateY(-100%); // Add this class
 }
