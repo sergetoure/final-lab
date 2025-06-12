@@ -44,6 +44,7 @@
   height: 8vh;
   width: 100vw;
   padding: 1rem;
+  transition: transform 0.3s ease-in-out;
 }
 
 /*create space between icons*/
@@ -214,6 +215,10 @@
   background-color: #ccc;
   cursor: not-allowed;
   color: #4e4b4b;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
 }
 
 .modal-overlay {
