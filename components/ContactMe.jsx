@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import FormInput from "./FormInput";
 import SubmitBtn from "./SubmitBtn";
 
-const ContactMe = () => {
+const ContactMe = ({ onShowModal }) => {
   const [formState, setState] = useState({
     isValid: false,
     formInputs: [
@@ -70,6 +70,8 @@ const ContactMe = () => {
         isTouched: false,
       })),
     }));
+    // Show modal after form submission
+    onShowModal(e);
   };
   //   const handleBlur = (e) => {
   //     const isValid = prevState.formInputs.every((input) => input.isValid);
